@@ -1,0 +1,68 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define SIZE 5
+int top=-1;
+int data[SIZE];
+void display()
+{
+    int i;
+    if(top==-1)
+        printf("\n stack is empty");
+    else{
+        printf("\n stack content are");
+        for(i=top;i>0;i--)
+            printf("%d\n",data[i]);
+    }
+}
+void push()
+{
+    int i;
+    if(top==-1)
+        printf("\n stack is empty");
+    else{
+        printf("\n stack content are");
+        for(i=top;i>0;i--)
+            printf("%d\n",data[i]);
+    }
+}
+void pop()
+{
+    int i;
+    if(top==-1)
+        printf("\n stack is empty");
+    else{
+        printf("\n stack content are");
+        for(i=top;i>0;i--)
+            printf("%d\n",data[i]);
+    }
+}
+int main()
+{
+  int ch,item;
+  for(;;)
+  {
+      printf("/n 1.push");
+      printf("/n 2.pop");
+      printf("/n 3.display");
+      printf("/n 4.exit");
+      printf("/n read choice:");
+      scanf("%d",&ch);
+      switch(ch)
+      {
+          case1:printf("/n read elements to be pushed:");
+          scanf("%d",&item);
+          Push(item);
+          break;
+          case2:printf("/n read elemrnts to be poped:");
+          scanf("%d",&item);
+          Pop();
+          break;
+          case3:printf("/n read elemrnts to be displayed:");
+          scanf("%d",&item);
+          Display();
+          break;
+          default:exit(0);
+      }
+  }
+    return 0;
+}
